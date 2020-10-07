@@ -11,7 +11,7 @@ namespace cs
             Component decoratedAB = new ConcreteDecoratorB(decoratedA);
             Component decoratedABA = new ConcreteDecoratorA(decoratedAB);
             Console.WriteLine(decoratedABA.Operation());
-          
+         
             ISubject subject = new RealSubject ();
             Console.WriteLine (subject.Request()) ;
             subject = new Proxy(subject as RealSubject);
@@ -19,6 +19,7 @@ namespace cs
             Console.WriteLine (subject.Request()) ;
             Console.WriteLine (subject.Request()) ;
             */
+            
             IImplementation implementationA = new ConcreteImplementationA();
             IImplementation implementationB = new ConcreteImplementationB();
             Abstraction abstractionA = new Abstraction(implementationA);
@@ -29,6 +30,7 @@ namespace cs
             Console.WriteLine (abstractionB.Operation());
             Console.WriteLine (exAbstractionA.Operation());
             Console.WriteLine (exAbstractionB.Operation());
+        
         }
     }
 }
