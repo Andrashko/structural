@@ -25,10 +25,18 @@ subject = new Proxy(subject);
 console.log (subject.Request());
 console.log (subject.Request());
 console.log (subject.Request());
-*/
+
 
 import {Page, AboutPage, LigthThem, DarckThem} from "./Bridge";
 let aboutD = new AboutPage(  "UzhNU",  new DarckThem());
 let aboutL = new AboutPage( "UzhNU", new LigthThem());
 console.log (aboutD.Render());
 console.log (aboutL.Render());
+*/
+
+import {Good, Cart, CuponCart} from "./Adapter";
+let goods = [ new Good ("Bread", 12.95, 2), new Good("Milk", 35.00, 1) ];
+let cart = new Cart(goods);
+console.log(`Goods price is: ${cart.calcTotalPrice()}`);
+let cuponCart = new CuponCart(cart, "20%");
+console.log(`Goods price  with 20% cupon is: ${cuponCart.calcTotalPriceWithCupon()}`);
