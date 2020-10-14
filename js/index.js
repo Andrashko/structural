@@ -34,11 +34,22 @@ console.log (aboutD.Render());
 console.log (aboutL.Render());
 let projectsA = new ProjectsPage( ["Системний аналіз", "Математика"], new AquaThem());
 console.log(projectsA.Render())
-*/
 
 import {Good, Cart, CuponCart} from "./Adapter";
 let goods = [ new Good ("Bread", 12.95, 2), new Good("Milk", 35.00, 1) ];
 let cart = new Cart(goods);
 console.log(`Goods price is: ${cart.calcTotalPrice()}`);
 let cuponCart = new CuponCart(cart, "20%");
-console.log(`Goods price  with 20% cupon is: ${cuponCart.calcTotalPriceWithCupon()}`);
+console.log(`Goods price  with 20% cupon is: ${cuponCart.calcTotalPriceWithCupon()}`);*/
+
+import {TYPE, Facade} from "./Facade2";
+
+const music = new Facade (TYPE.MUSIC);
+music.get(3)
+    .then(data => console.log(data))
+    .catch(e => console.error(e));
+
+const books = new Facade(TYPE.BOOK);
+books.get(5)
+.then(data => console.log(data))
+.catch(e => console.error(e));   
