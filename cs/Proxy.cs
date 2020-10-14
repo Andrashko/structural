@@ -4,12 +4,16 @@ namespace cs
     public interface ISubject
     {
         string Request();
+        void Connect();
     }
     class RealSubject : ISubject
     {
         public string Request()
         {
             return "Real subject response";
+        }
+        public void Connect(){
+            Console.WriteLine("Connected");
         }
     }
     class Proxy : ISubject
@@ -27,13 +31,16 @@ namespace cs
         {
             if (this.CheckAccess())
             {
-                this._realSubject = new RealSubject();
                 string response =  this._realSubject.Request();
                 this.LogAccess(response);
                 return response;
             }
             else
                 return "Proxy response";
+        }
+
+        public void Connect (){
+            this._realSubject.Connect();
         }
         private Random rnd = new Random(2);
         public bool CheckAccess()

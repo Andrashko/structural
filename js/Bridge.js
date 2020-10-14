@@ -1,7 +1,7 @@
 class Page{
     constructor (content, them){        
         this.content = content || "";
-        this.them = them || {}; 
+        this.them = them || new Them ("black", "white"); 
         this.template = 
         `<html>
             <head>
@@ -27,6 +27,17 @@ class AboutPage extends Page{
     }
 }
 
+class ProjectsPage extends Page{
+    constructor (projects, them){
+        let content = "<ol>\n";
+        for (let project of projects){
+            content += `<li> ${project} </li>\n`; 
+        }
+        content += "</ol>\n";
+        super (content, them);
+    }
+}
+
 class Them {
     constructor (color, background){
         this.color = color;
@@ -46,14 +57,20 @@ class Them {
 
 class DarckThem extends Them {
     constructor(){
-        super ("white", "black")
+        super ("white", "black");
     }
 }
 
 class LigthThem extends Them {
     constructor (){
-        super ( "black", "white")
+        super ( "black", "white");
     }
 }
 
-export {Page, AboutPage, LigthThem, DarckThem}
+class AquaThem extends Them {
+    constructor(){
+        super ("aqua", "blue");
+    }
+}
+
+export {Page, AboutPage, ProjectsPage, LigthThem, DarckThem, AquaThem}

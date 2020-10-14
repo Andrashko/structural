@@ -1,5 +1,9 @@
 namespace cs
 {
+    interface IImplementation
+    {
+        string OperationImplementation();
+    }
     class Abstraction
     {
         protected IImplementation _implementation;
@@ -24,10 +28,7 @@ namespace cs
             base._implementation.OperationImplementation();
         }
     }
-    interface IImplementation
-    {
-        string OperationImplementation();
-    }
+    
     class ConcreteImplementationA : IImplementation
     {
         public string OperationImplementation()

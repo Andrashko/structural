@@ -27,11 +27,13 @@ console.log (subject.Request());
 console.log (subject.Request());
 
 
-import {Page, AboutPage, LigthThem, DarckThem} from "./Bridge";
-let aboutD = new AboutPage(  "UzhNU",  new DarckThem());
+import {Page, AboutPage, ProjectsPage,  LigthThem, DarckThem, AquaThem} from "./Bridge";
+let aboutD = new AboutPage( "UzhNU",  new DarckThem());
 let aboutL = new AboutPage( "UzhNU", new LigthThem());
 console.log (aboutD.Render());
 console.log (aboutL.Render());
+let projectsA = new ProjectsPage( ["Системний аналіз", "Математика"], new AquaThem());
+console.log(projectsA.Render())
 */
 
 import {Good, Cart, CuponCart} from "./Adapter";
