@@ -34,12 +34,14 @@ namespace cs
             Console.WriteLine(oldLib.GetSpecificRequest(true));
             Adapter newLib = new Adapter(oldLib);
             Console.WriteLine(newLib.GetRequest());
-            */
+           
             Process process = new Process();
             AdaptedPocess adaptedPocess = new AdaptedPocess(process) ;
             ProcessInformation pi = adaptedPocess.Create ("notepad.exe"); 
             Console.WriteLine (pi.hProcess);
-
+            */
+            Facade facade = new Facade();
+            Console.WriteLine(facade.Operation());
         }
     }
 }
