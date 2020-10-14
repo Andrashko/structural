@@ -18,12 +18,7 @@ namespace cs
             Console.WriteLine (subject.Request()) ;
             Console.WriteLine (subject.Request()) ;
             Console.WriteLine (subject.Request()) ;
-<<<<<<< HEAD
-         
-=======
-            */
-            
->>>>>>> 846843c34fe6d1ddd3f161da23f76d4a5e5199a4
+
             IImplementation implementationA = new ConcreteImplementationA();
             IImplementation implementationB = new ConcreteImplementationB();
             Abstraction abstractionA = new Abstraction(implementationA);
@@ -34,7 +29,6 @@ namespace cs
             Console.WriteLine (abstractionB.Operation());
             Console.WriteLine (exAbstractionA.Operation());
             Console.WriteLine (exAbstractionB.Operation());
-<<<<<<< HEAD
             
             Adaptee oldLib = new Adaptee();
             Console.WriteLine(oldLib.GetSpecificRequest(true));
@@ -45,9 +39,7 @@ namespace cs
             AdaptedPocess adaptedPocess = new AdaptedPocess(process) ;
             ProcessInformation pi = adaptedPocess.Create ("notepad.exe"); 
             Console.WriteLine (pi.hProcess);
-=======
-        
->>>>>>> 846843c34fe6d1ddd3f161da23f76d4a5e5199a4
+
         }
     }
 }
