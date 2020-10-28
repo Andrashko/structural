@@ -6,40 +6,40 @@ namespace cs
     {
         static void Main(string[] args)
         {
-           /* Component component = new ConcreteComponent();
-            Component decoratedA = new ConcreteDecoratorA(component);
-            Component decoratedAB = new ConcreteDecoratorB(decoratedA);
-            Component decoratedABA = new ConcreteDecoratorA(decoratedAB);
-            Console.WriteLine(decoratedABA.Operation());
+            // Component component = new ConcreteComponent();
+            // Component decoratedA = new ConcreteDecoratorA(component);
+            // Component decoratedAB = new ConcreteDecoratorB(decoratedA);
+            // Component decoratedABA = new ConcreteDecoratorA(decoratedAB);
+            // Console.WriteLine(decoratedABA.Operation());
          
-            ISubject subject = new RealSubject ();
-            Console.WriteLine (subject.Request()) ;
-            subject = new Proxy(subject as RealSubject);
-            Console.WriteLine (subject.Request()) ;
-            Console.WriteLine (subject.Request()) ;
-            Console.WriteLine (subject.Request()) ;
+            // ISubject subject = new RealSubject ();
+            // Console.WriteLine (subject.Request()) ;
+            // subject = new Proxy(subject as RealSubject);
+            // Console.WriteLine (subject.Request()) ;
+            // Console.WriteLine (subject.Request()) ;
+            // Console.WriteLine (subject.Request()) ;
 
-            IImplementation implementationA = new ConcreteImplementationA();
-            IImplementation implementationB = new ConcreteImplementationB();
-            Abstraction abstractionA = new Abstraction(implementationA);
-            Abstraction abstractionB = new Abstraction(implementationB);
-            Abstraction exAbstractionA = new ExtendedAbstraction(implementationA);
-            Abstraction exAbstractionB = new ExtendedAbstraction(implementationB);
-            Console.WriteLine (abstractionA.Operation());
-            Console.WriteLine (abstractionB.Operation());
-            Console.WriteLine (exAbstractionA.Operation());
-            Console.WriteLine (exAbstractionB.Operation());
+            // IImplementation implementationA = new ConcreteImplementationA();
+            // IImplementation implementationB = new ConcreteImplementationB();
+            // Abstraction abstractionA = new Abstraction(implementationA);
+            // Abstraction abstractionB = new Abstraction(implementationB);
+            // Abstraction exAbstractionA = new ExtendedAbstraction(implementationA);
+            // Abstraction exAbstractionB = new ExtendedAbstraction(implementationB);
+            // Console.WriteLine (abstractionA.Operation());
+            // Console.WriteLine (abstractionB.Operation());
+            // Console.WriteLine (exAbstractionA.Operation());
+            // Console.WriteLine (exAbstractionB.Operation());
             
-            Adaptee oldLib = new Adaptee();
-            Console.WriteLine(oldLib.GetSpecificRequest(true));
-            Adapter newLib = new Adapter(oldLib);
-            Console.WriteLine(newLib.GetRequest());
+            // Adaptee oldLib = new Adaptee();
+            // Console.WriteLine(oldLib.GetSpecificRequest(true));
+            // Adapter newLib = new Adapter(oldLib);
+            // Console.WriteLine(newLib.GetRequest());
            
-            Process process = new Process();
-            AdaptedPocess adaptedPocess = new AdaptedPocess(process) ;
-            ProcessInformation pi = adaptedPocess.Create ("notepad.exe"); 
-            Console.WriteLine (pi.hProcess);
-            */
+            // Process process = new Process();
+            // AdaptedPocess adaptedPocess = new AdaptedPocess(process) ;
+            // ProcessInformation pi = adaptedPocess.Create ("notepad.exe"); 
+            // Console.WriteLine (pi.hProcess);
+            
             Facade facade = new Facade();
             Console.WriteLine(facade.Operation());
         }

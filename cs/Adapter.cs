@@ -9,7 +9,7 @@ namespace cs
         public string GetSpecificRequest(bool mustBeTrue)
         {
             if (!mustBeTrue) 
-                throw new System.Exception ("U must call GetSpecificRequest(true)");
+                throw new System.Exception ("You must call GetSpecificRequest(true)");
             return "Specific request.";
         }
     }

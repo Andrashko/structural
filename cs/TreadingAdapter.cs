@@ -84,7 +84,7 @@ namespace cs{
             this._process = process;
         }
         public ProcessInformation Create(string commandLine){
-            ProcessInformation pi =new ProcessInformation();
+            ProcessInformation pi;
             Startupinfo si = new Startupinfo();
             si.cb = Marshal.SizeOf(si);
             IntPtr INVALID_HANDLE_VALUE = new IntPtr(-1);
