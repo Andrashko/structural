@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace cs
@@ -44,21 +44,21 @@ namespace cs
             // Facade facade = new Facade();
             // Console.WriteLine(facade.Operation());            
 
+            // FlyweightFactory factory = new FlyweightFactory();
+            // ConcreteFlyweight fw1 = factory.GetFlyweight("one") as ConcreteFlyweight;
+            // ConcreteFlyweight fw2 = factory.GetFlyweight("two") as ConcreteFlyweight;
+            // ConcreteFlyweight fw3 = factory.GetFlyweight("one") as ConcreteFlyweight;
+            // Console.WriteLine(fw1.State);
+            // Console.WriteLine(fw2.State);                     
+            // Console.WriteLine(fw3.State);
+            // fw1.IncState(1);
+            // fw2.IncState(1);
+            // fw3.IncState(1);
+            // Console.WriteLine(fw1.State);
+            // Console.WriteLine(fw2.State);                     
+            // Console.WriteLine(fw3.State);
+
             FlyweightFactory factory = new FlyweightFactory();
-            ConcreteFlyweight fw1 = factory.GetFlyweight("one") as ConcreteFlyweight;
-            ConcreteFlyweight fw2 = factory.GetFlyweight("two") as ConcreteFlyweight;
-            ConcreteFlyweight fw3 = factory.GetFlyweight("one") as ConcreteFlyweight;
-            Console.WriteLine(fw1.State);
-            Console.WriteLine(fw2.State);                     
-            Console.WriteLine(fw3.State);
-            fw1.IncState(1);
-            fw2.IncState(1);
-            fw3.IncState(1);
-            Console.WriteLine(fw1.State);
-            Console.WriteLine(fw2.State);                     
-            Console.WriteLine(fw3.State);
-
-
             string txt = @"  Hashtable Class
 Definition
 Namespace:
@@ -424,11 +424,14 @@ IEqualityComparer
             }
             if (Choose == 2 ){
                 for (int i=0; i< text.Length;i++ ){
-                    list.Add(new ConcreteFlyweight());
+                    list.Add(new ConcreteFlyweight(text[i].ToString()));
                 }
             }
             Console.WriteLine("Done");
-            Console.ReadLine()           ;
+             for (int i=0; i< text.Length;i++ ){
+                 list[i].Print();
+             }
+            Console.ReadLine();
         }
     }
 }

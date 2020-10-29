@@ -9,7 +9,8 @@ class Fliywight{
 
 class FlyweightFactory{
     constructor (){
-        this.fliywights = {};
+        this.fliywights = {
+        };
     }
     GetFlyweight(key){
         if (!this.fliywights[key])
@@ -18,4 +19,4 @@ class FlyweightFactory{
     }
 }
 
-export {FlyweightFactory, Fliywight}
+export {FlyweightFactory, Fliywight};
