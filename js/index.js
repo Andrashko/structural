@@ -54,17 +54,29 @@
 // .then(data => console.log(data))
 // .catch(e => console.error(e));   
 
-import {FlyweightFactory} from "./Flyweight";
-let factory = new FlyweightFactory();
-let fw1 = factory.GetFlyweight("one");
-let fw2 = factory.GetFlyweight("two");
-let fw3 = factory.GetFlyweight("one");
-console.log(fw1.State);
-console.log(fw2.State);
-console.log(fw1.State);
-fw1.IncState(1);
-fw2.IncState(1);
-fw3.IncState(1);
-console.log(fw1.State);
-console.log(fw2.State);
-console.log(fw1.State);
+// import {FlyweightFactory} from "./Flyweight";
+// let factory = new FlyweightFactory();
+// let fw1 = factory.GetFlyweight("one");
+// let fw2 = factory.GetFlyweight("two");
+// let fw3 = factory.GetFlyweight("one");
+// console.log(fw1.State);
+// console.log(fw2.State);
+// console.log(fw1.State);
+// fw1.IncState(1);
+// fw2.IncState(1);
+// fw3.IncState(1);
+// console.log(fw1.State);
+// console.log(fw2.State);
+// console.log(fw1.State);
+
+import {File, Folder} from "./Composite";
+
+let root = new Folder("C")
+    .Add(new File("package","json"))
+    .Add(new Folder("node_modules")
+        .Add(new File("babel", "js"))
+        .Add(new File("express", "js"))
+    )
+    .Add(new File("index","js"));
+
+console.log(root.toString());
