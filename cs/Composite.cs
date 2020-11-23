@@ -43,6 +43,7 @@ namespace cs
         {
             this._children.Remove(component);
         }
+        
         public override string Operation()
         {
             int i = 0;
